@@ -25,7 +25,7 @@ var json = {
     } 
 };
 
-var json2 = {
+var jsonNew = {
     "pets": [
         {
             "animal": "Bird",
@@ -53,3 +53,11 @@ var json2 = {
         }
     ]
 };
+
+var handleData = function (json) {
+    for (var i = 0; i < json.pets.length; i++){
+        var pet = json.pets[i];
+        console.log(" " + pet.animal + " " + pet.name + " ");
+    };
+};
+handleData(jsonNew);
