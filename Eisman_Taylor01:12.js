@@ -25,11 +25,6 @@ var json = {
     } 
 };
 
-for (var key in json.pets) {
-    var pet = json.pets[key];
-    pet.age
-};
-
 var json2 = {
     "pets": [
         {
