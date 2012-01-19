@@ -25,35 +25,6 @@ var json = {
     } 
 };
 
-var jsonNew = {
-    "pets": [
-        {
-            "animal": "Bird",
-            "name": "Charley",
-            "color": "Orange",
-            "age": 4
-        },
-           {
-            "animal": "Dog",
-            "name": "Bevo",
-            "color": "Black",
-            "age": 2
-        },
-           {
-            "animal": "Snake",
-            "name": "Willey",
-            "color": "Green",
-            "age": 6
-        },
-           {
-            "animal": "Cat",
-            "name": "Sin",
-            "color": "Grey",
-            "age": 1
-        }
-    ]
-};
-
 var handleData = function (json) {
     for (var i = 0; i < json.pets.length; i++){
         var pet = json.pets[i];
