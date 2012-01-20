@@ -10,6 +10,7 @@ var day = "Monday";
 var minimumInventory = 2;
 var maximumInventory = 5;
 
+// JSON Data
 var candy = {
     "shelf": {
       "sourCandy": {
@@ -21,18 +22,11 @@ var candy = {
       "sweetCandy": {
       	"gummyBears": {
        		"currentInventory": 6,
-        	"color": "Black"
+        	"color": "Clear"
       	}
       }
     }
 };
-
-var currentInventory = new Array();
-currentInventory["Jolly Ranchers"] = 2;
-currentInventory["Chewing Gum"] = 5;
-currentInventory["Suckers"] = 3;
-currentInventory["Gummy Bears"] = 1;
-
 
 var openStore = function(day){
 	if(day = "Monday"){
@@ -42,6 +36,21 @@ var openStore = function(day){
 	}
 };
 
+function updateInventory(property,inventory){
+	
+}
+
+function getInventory(property){
+	
+}
+
+function listInvetory(currentInvetory){
+	for (x in currentInventory){
+		console.log(currentInventory[x]);
+	}
+}
+
+listInventory(candy);
 
 var needToRestock = function(currentInventory,minimumInventory){
 	if(currentInventory < minimumInventory){
@@ -51,15 +60,6 @@ var needToRestock = function(currentInventory,minimumInventory){
 
 
 var restockCandy = function (currtentInventory) {
-	inventoryRemaining = currentInventory.length;
-	while(inventoryRemaining > 0){z
-		
-		console.log("We need each type of candy on the shelf.");
-		for (var inventoryItem = 0; inventoryItem < currentInventory.length; inventoryItem++){
-			console.log("Stocking " + inventory[inventoryItem]);
-		}
-	} 
-		console.log("The candy is fully stocked");
 	
 };
 
@@ -72,9 +72,3 @@ var workStatus = function (manager,maximumInventory){
 var inventoryChart = function (currrentInventory){
 	console.log(currentInventory);
 };
-
-openStore(day);
-needToRestock(currentInventory,minimumInventory);
-inventoryChart(currentInventory);
-restockCandy(currentInventory);
-workStatus(manager,maximumInventory);
