@@ -1,34 +1,80 @@
+// Taylor Eisman
+// SDI Project 3
+// 01/12
+
 alert("JavaScript works!");
 
-var json = {
-    "pets": {
-      "bird": {
-        "name": "Charley",
-        "color": "Orange",
-        "age": 4
+var worker = "Henry";
+var manager = "Walter";
+var day = "Monday";
+var minimumInventory = 2;
+var maximumInventory = 5;
+
+var candy = {
+    "shelf": {
+      "sourCandy": {
+          "worms" : {
+        	"currentInventory": 4,
+        	"color": "Orange"
+      	}
       },
-      "dog": {
-        "name": "Bevo",
-        "color": "Black",
-        "age": 2
-      },
-      "snake": {
-        "name": "Willy",
-        "color": "Green",
-        "age": 6
-      },
-      "cat": {
-        "name": "Sin",
-        "color": "Grey",
-        "age": 1
+      "sweetCandy": {
+      	"gummyBears": {
+       		"currentInventory": 6,
+        	"color": "Black"
+      	}
       }
-    } 
+    }
 };
 
-var handleData = function (json) {
-    for (var i = 0; i < json.pets.length; i++){
-        var pet = json.pets[i];
-        console.log(" " + pet.animal + " " + pet.name + " ");
-    };
+var currentInventory = new Array();
+currentInventory["Jolly Ranchers"] = 2;
+currentInventory["Chewing Gum"] = 5;
+currentInventory["Suckers"] = 3;
+currentInventory["Gummy Bears"] = 1;
+
+
+var openStore = function(day){
+	if(day = "Monday"){
+		console.log( worker + " needs to check the candy stock." );
+	} else {
+		console.log( worker + " does not need to restock the candy." );
+	}
 };
-handleData(jsonNew);
+
+
+var needToRestock = function(currentInventory,minimumInventory){
+	if(currentInventory < minimumInventory){
+		console.log( worker + " needs to add more candy.");
+	}	
+};
+
+
+var restockCandy = function (currtentInventory) {
+	inventoryRemaining = currentInventory.length;
+	while(inventoryRemaining > 0){z
+		
+		console.log("We need each type of candy on the shelf.");
+		for (var inventoryItem = 0; inventoryItem < currentInventory.length; inventoryItem++){
+			console.log("Stocking " + inventory[inventoryItem]);
+		}
+	} 
+		console.log("The candy is fully stocked");
+	
+};
+
+
+var workStatus = function (manager,maximumInventory){
+	console.log(manager + " will be very upset with " + worker + " if he stocks more than " + maximumInventory + " pieces of each candy.");	
+};
+
+
+var inventoryChart = function (currrentInventory){
+	console.log(currentInventory);
+};
+
+openStore(day);
+needToRestock(currentInventory,minimumInventory);
+inventoryChart(currentInventory);
+restockCandy(currentInventory);
+workStatus(manager,maximumInventory);
