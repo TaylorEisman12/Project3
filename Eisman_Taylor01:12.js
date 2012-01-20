@@ -7,43 +7,47 @@ alert("JavaScript works!");
 var worker = "Henry";
 var manager = "Walter";
 var day = "Monday";
-var minimumInventory = 10;
+var candyStocked = 10;
+var curentInventory = function(candySold){
+	candyStocked - candySold;
+	
+	return;
+};
+
+//sold 3 pieces
 
 // JSON Data
 var candy = {
     "shelf": {
       "sourCandy": {
           "worms" : {
-        	"currentInventory": 4,
         	"color": "Orange"
       	}
       },
       "sweetCandy": {
       	"gummyBears": {
-       		"currentInventory": 6,
         	"color": "Clear"
       	}
       }
+    },
+    getInventory:function(candyType, candyName){
+    	return shelf.candyType.candyName.currentInventory;
     }
 };
 
-var openStore = function(day){
+var checkInventory = function(day){
 	if(day = "Monday"){
-		console.log( worker + " needs to check the candy stock." );
+		needToCheck = true;
 	} else {
-		console.log( worker + " does not need to restock the candy." );
-	}
+		needToCheck = false; 
+	  }
+	  	return needToRestock;
 };
 
-function updateInventory(candyname,newinventory,currentcandy){
-	currentcandy[candyname] = newinventory;
-}
-
-updateInventory("worms",5,candy);
 
 function getInventory(property){
 	
-}
+};
 
 var listInvetory = function(currentInvetory){
 	for (x in currentInventory){
