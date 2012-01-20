@@ -7,8 +7,7 @@ alert("JavaScript works!");
 var worker = "Henry";
 var manager = "Walter";
 var day = "Monday";
-var minimumInventory = 2;
-var maximumInventory = 5;
+var minimumInventory = 10;
 
 // JSON Data
 var candy = {
@@ -36,15 +35,17 @@ var openStore = function(day){
 	}
 };
 
-function updateInventory(property,inventory){
-	
+function updateInventory(candyname,newinventory,currentcandy){
+	currentcandy[candyname] = newinventory;
 }
+
+updateInventory("worms",5,candy);
 
 function getInventory(property){
 	
 }
 
-function listInvetory(currentInvetory){
+var listInvetory = function(currentInvetory){
 	for (x in currentInventory){
 		console.log(currentInventory[x]);
 	}
@@ -59,8 +60,15 @@ var needToRestock = function(currentInventory,minimumInventory){
 };
 
 
-var restockCandy = function (currtentInventory) {
-	
+var restockCandy = function (candy) {
+	for(i=0; i <= candy.shelf.worms.currnetInventory; i++){
+	}
+		while (currentInventory <= minimumInventory){
+		console.log("There is " + currentInventory + " pieces of candy you need more.");
+		
+		}
+	}
+	updateInventory(	
 };
 
 
