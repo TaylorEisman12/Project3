@@ -7,7 +7,12 @@ alert("JavaScript works!");
 var worker = "Henry";
 var manager = "Walter";
 var day = "Monday";
-var candyStocked = 10;
+var sourCandy = 5;
+var sweetCandy = 5;
+var candyStocked = function(sourCandy,sweetCandy){
+		sourCandy + sweetCandy;
+};
+		;
 var curentInventory = function(candySold){
 	candyStocked - candySold;
 	
@@ -44,11 +49,6 @@ var checkInventory = function(day){
 	  	return needToRestock;
 };
 
-
-function getInventory(property){
-	
-};
-
 var listInvetory = function(currentInvetory){
 	for (x in currentInventory){
 		console.log(currentInventory[x]);
@@ -57,9 +57,11 @@ var listInvetory = function(currentInvetory){
 
 listInventory(candy);
 
-var needToRestock = function(currentInventory,minimumInventory){
-	if(currentInventory < minimumInventory){
+var restockDetails = function(needToRestock){
+	if(needToRestock = true){
 		console.log( worker + " needs to add more candy.");
+	}	else{
+			console.log("It looks like the candy is fully stocked!");
 	}	
 };
 
